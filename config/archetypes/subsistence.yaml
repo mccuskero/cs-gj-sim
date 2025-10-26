@@ -1,0 +1,50 @@
+# Archetype 1: Subsistence Living (Extreme Poverty)
+# Energy Profile: 6-12 MJ/day (100% biological)
+
+name: Subsistence
+level: 1
+description: "Extreme poverty with minimal infrastructure access"
+
+energy_profile:
+  total_daily_joules_min: 6000000      # 6 MJ/day
+  total_daily_joules_max: 12000000     # 12 MJ/day
+  biological_percentage: 100
+  technological_percentage: 0
+
+person:
+  basal_metabolic_rate_joules: 6700000  # ~1600 kcal/day
+  activity_factor: 1.3                  # Light activity
+  daily_food_intake_kcal: 1500          # Minimal caloric intake
+
+infrastructure:
+  has_electricity: false
+  has_running_water: false
+  has_shelter: false                    # Informal shelter only
+
+assets:
+  owns_house: false
+  house_count: 0
+  owns_vehicle: false
+  vehicle_count: 0
+  bicycle_ownership: 0.0                # 0% own bicycles
+
+transportation:
+  daily_distance_km: 5                  # Walking only
+  mode: "walking"
+
+housing:
+  type: "informal_shelter"
+  size_square_meters: 0                 # No formal housing
+  occupancy: "shared"
+  heating_type: "none"
+  cooling_type: "none"
+
+employment:
+  type: "subsistence_farming"
+  formal_employment: false
+
+typical_regions:
+  - "Rural sub-Saharan Africa"
+  - "Rural South Asia"
+  - "Remote mountainous areas"
+  - "Conflict zones"

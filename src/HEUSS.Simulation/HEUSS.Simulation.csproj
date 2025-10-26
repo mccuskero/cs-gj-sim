@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\HEUSS.Core\HEUSS.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Orleans.Core" Version="9.2.1" />
+    <PackageReference Include="Microsoft.Orleans.Sdk" Version="9.2.1" />
+    <PackageReference Include="Microsoft.Orleans.Streaming" Version="9.2.1" />
+    <PackageReference Include="Microsoft.Orleans.Reminders" Version="9.2.1" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>

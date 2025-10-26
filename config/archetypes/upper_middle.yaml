@@ -1,0 +1,54 @@
+# Archetype 5: Upper-Middle Income (Full Infrastructure)
+# Energy Profile: 200-400 MJ/day (10% biological, 90% technological)
+
+name: UpperMiddle
+level: 5
+description: "Upper-middle income with full infrastructure"
+
+energy_profile:
+  total_daily_joules_min: 200000000    # 200 MJ/day
+  total_daily_joules_max: 400000000    # 400 MJ/day
+  biological_percentage: 10
+  technological_percentage: 90
+
+person:
+  basal_metabolic_rate_joules: 9000000  # ~2150 kcal/day
+  activity_factor: 1.6
+  daily_food_intake_kcal: 3000
+
+infrastructure:
+  has_electricity: true
+  electricity_hours_per_day: 24
+  has_running_water: true
+  has_shelter: true
+
+assets:
+  owns_house: 0.9                       # 90% own
+  house_count: 1
+  owns_vehicle: 1.0                     # 100% own
+  vehicle_count: 1.5                    # 1-2 cars
+
+transportation:
+  daily_distance_km: 50
+  mode: "car"
+  vehicle_fuel_liters_per_day: 5.0      # ~10 km/L
+
+housing:
+  type: "owned_house"
+  size_square_meters: 150
+  occupancy: 3
+  heating_type: "natural_gas"
+  cooling_type: "full_ac"
+  electricity_usage_kwh_per_day: 30     # Full appliances, home office
+  water_heating_kwh_per_day: 8
+  hvac_kwh_per_day: 20
+
+employment:
+  type: "senior_professional"
+  formal_employment: true
+  daily_commute_km: 35
+
+typical_regions:
+  - "Suburbs in developed nations"
+  - "High-income urban areas"
+  - "Professional neighborhoods"

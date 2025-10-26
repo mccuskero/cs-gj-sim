@@ -1,0 +1,46 @@
+{
+  "name": "United States",
+  "countryCode": "USA",
+  "scope": 1,
+  "population": 331000000,
+  "totalDailyEnergyJoules": 99300000000000000,
+  "perCapitaDailyEnergyJoules": 300000000,
+  "generatedAt": "2025-10-26T01:20:53.937964Z",
+  "entities": {
+    "personCount": 331000000,
+    "personEnergyJoules": 3310000000000000,
+    "houseCount": 297900000,
+    "houseEnergyJoules": 39720000000000000,
+    "vehicleCount": 496500000,
+    "vehicleEnergyJoules": 29790000000000000,
+    "businessCount": 6620000,
+    "businessEnergyJoules": 19860000000000000,
+    "dataCenterCount": 3310,
+    "dataCenterEnergyJoules": 4965000000000000,
+    "farmCount": 331000,
+    "farmEnergyJoules": 2979000000000000,
+    "farmFoodOutputJoules": 14895000000000000,
+    "totalBiologicalEnergyJoules": 3310000000000000,
+    "totalTechnologicalEnergyJoules": 97314000000000000
+  },
+  "regions": [
+    {
+      "regionName": "Region A",
+      "population": 110333333,
+      "totalDailyEnergyJoules": 33099999900000000,
+      "perCapitaDailyEnergyJoules": 300000000
+    },
+    {
+      "regionName": "Region B",
+      "population": 110333333,
+      "totalDailyEnergyJoules": 39719999880000000,
+      "perCapitaDailyEnergyJoules": 360000000
+    },
+    {
+      "regionName": "Region C",
+      "population": 110333333,
+      "totalDailyEnergyJoules": 26479999920000000,
+      "perCapitaDailyEnergyJoules": 240000000
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+# Archetype 4: Middle Income (Moderate Infrastructure)
+# Energy Profile: 80-200 MJ/day (20% biological, 80% technological)
+
+name: Middle
+level: 4
+description: "Middle income with moderate infrastructure"
+
+energy_profile:
+  total_daily_joules_min: 80000000     # 80 MJ/day
+  total_daily_joules_max: 200000000    # 200 MJ/day
+  biological_percentage: 20
+  technological_percentage: 80
+
+person:
+  basal_metabolic_rate_joules: 8500000  # ~2000 kcal/day
+  activity_factor: 1.5
+  daily_food_intake_kcal: 2600
+
+infrastructure:
+  has_electricity: true
+  electricity_hours_per_day: 24         # 24-hour access
+  has_running_water: true
+  has_shelter: true
+
+assets:
+  owns_house: 0.6                       # 60% own
+  house_count: 0.6
+  owns_vehicle: 0.8                     # 80% own car
+  vehicle_count: 1
+
+transportation:
+  daily_distance_km: 30
+  mode: "car"
+  vehicle_fuel_liters_per_day: 3.0      # ~10 km/L efficiency
+
+housing:
+  type: "house_or_apartment"
+  size_square_meters: 80
+  occupancy: 3
+  heating_type: "natural_gas"
+  cooling_type: "partial_ac"
+  electricity_usage_kwh_per_day: 15     # Multiple appliances, TV, computer
+  water_heating_kwh_per_day: 4
+
+employment:
+  type: "professional"
+  formal_employment: true
+  daily_commute_km: 25
+
+typical_regions:
+  - "Developed nations middle class"
+  - "Urban areas in developed countries"
+  - "Suburban areas"

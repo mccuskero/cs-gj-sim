@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\HEUSS.Core\HEUSS.Core.csproj" />
+    <ProjectReference Include="..\..\HEUSS.Simulation\HEUSS.Simulation.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Orleans.Server" Version="9.2.1" />
+    <PackageReference Include="Microsoft.Orleans.Streaming" Version="9.2.1" />
+    <PackageReference Include="Microsoft.Orleans.Reminders" Version="9.2.1" />
+    <PackageReference Include="OrleansDashboard" Version="8.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="9.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="9.0.1" />
+  </ItemGroup>
+
+</Project>

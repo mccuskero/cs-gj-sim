@@ -1,0 +1,52 @@
+# Archetype 3: Lower-Middle Income (Emerging Infrastructure)
+# Energy Profile: 30-80 MJ/day (40% biological, 60% technological)
+
+name: LowerMiddle
+level: 3
+description: "Lower-middle income with emerging infrastructure"
+
+energy_profile:
+  total_daily_joules_min: 30000000     # 30 MJ/day
+  total_daily_joules_max: 80000000     # 80 MJ/day
+  biological_percentage: 40
+  technological_percentage: 60
+
+person:
+  basal_metabolic_rate_joules: 8000000  # ~1900 kcal/day
+  activity_factor: 1.5
+  daily_food_intake_kcal: 2400
+
+infrastructure:
+  has_electricity: true
+  electricity_hours_per_day: 16         # 12-20 hours/day
+  has_running_water: true               # Shared or individual
+  has_shelter: true
+
+assets:
+  owns_house: 0.3                       # 30% own, 70% rent
+  house_count: 0.3
+  owns_vehicle: 0.2                     # 20% own motorcycle
+  vehicle_count: 0.2
+
+transportation:
+  daily_distance_km: 20
+  mode: "motorcycle_or_transit"
+  vehicle_fuel_liters_per_day: 1.0      # If motorcycle
+
+housing:
+  type: "small_apartment"
+  size_square_meters: 45
+  occupancy: 3
+  heating_type: "electric_heater"
+  cooling_type: "fan"
+  electricity_usage_kwh_per_day: 5      # Lighting, phone, small appliances
+
+employment:
+  type: "factory_worker"
+  formal_employment: true
+  daily_commute_km: 15
+
+typical_regions:
+  - "Urban areas in developing nations"
+  - "Emerging economies"
+  - "Suburban developing areas"

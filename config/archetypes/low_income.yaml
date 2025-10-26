@@ -1,0 +1,52 @@
+# Archetype 2: Low Income (Basic Infrastructure)
+# Energy Profile: 12-30 MJ/day (80% biological, 20% technological)
+
+name: LowIncome
+level: 2
+description: "Low income with basic infrastructure emerging"
+
+energy_profile:
+  total_daily_joules_min: 12000000     # 12 MJ/day
+  total_daily_joules_max: 30000000     # 30 MJ/day
+  biological_percentage: 80
+  technological_percentage: 20
+
+person:
+  basal_metabolic_rate_joules: 7500000  # ~1800 kcal/day
+  activity_factor: 1.4                  # Moderate activity
+  daily_food_intake_kcal: 2000
+
+infrastructure:
+  has_electricity: true
+  electricity_hours_per_day: 3          # 2-4 hours/day
+  has_running_water: false              # Shared community well
+  has_shelter: true
+
+assets:
+  owns_house: false                     # Rented room or shared
+  house_count: 0
+  owns_vehicle: false
+  vehicle_count: 0
+  bicycle_ownership: 0.3                # 30% own bicycles
+
+transportation:
+  daily_distance_km: 10                 # Walking + bicycle
+  mode: "bicycle"
+
+housing:
+  type: "shared_room"
+  size_square_meters: 15
+  occupancy: "shared"
+  heating_type: "firewood"
+  cooling_type: "none"
+  electricity_usage_kwh_per_day: 0.5    # Limited: lighting only
+
+employment:
+  type: "manual_labor"
+  formal_employment: true
+  daily_commute_km: 10
+
+typical_regions:
+  - "Urban slums in developing nations"
+  - "Rural developing areas"
+  - "Low-income urban neighborhoods"

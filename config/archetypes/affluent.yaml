@@ -1,0 +1,61 @@
+# Archetype 6: High Income / Affluent (Maximum Infrastructure)
+# Energy Profile: 400-1000+ MJ/day (5% biological, 95% technological)
+
+name: Affluent
+level: 6
+description: "Affluent with maximum infrastructure and energy consumption"
+
+energy_profile:
+  total_daily_joules_min: 400000000    # 400 MJ/day
+  total_daily_joules_max: 1000000000   # 1000 MJ/day (1 GJ/day)
+  biological_percentage: 5
+  technological_percentage: 95
+
+person:
+  basal_metabolic_rate_joules: 9500000  # ~2270 kcal/day
+  activity_factor: 1.7
+  daily_food_intake_kcal: 3500
+
+infrastructure:
+  has_electricity: true
+  electricity_hours_per_day: 24
+  has_running_water: true
+  has_shelter: true
+
+assets:
+  owns_house: 1.2                       # Multiple properties
+  house_count: 1.5                      # May own vacation home
+  owns_vehicle: 1.0
+  vehicle_count: 2.5                    # 2-3+ vehicles
+
+transportation:
+  daily_distance_km: 100                # Long commutes + leisure
+  mode: "multiple_cars"
+  vehicle_fuel_liters_per_day: 12.0     # SUVs, luxury cars
+
+housing:
+  type: "large_house"
+  size_square_meters: 350
+  occupancy: 4
+  heating_type: "natural_gas"
+  cooling_type: "full_ac_oversized"
+  electricity_usage_kwh_per_day: 60     # Smart home, extensive electronics
+  water_heating_kwh_per_day: 15
+  hvac_kwh_per_day: 50                  # Oversized HVAC
+  pool_spa_kwh_per_day: 20              # Heated pool/spa
+
+employment:
+  type: "executive"
+  formal_employment: true
+  daily_commute_km: 50
+
+lifestyle:
+  frequent_travel: true
+  second_home: true
+  luxury_amenities: true
+
+typical_regions:
+  - "Wealthy suburbs"
+  - "Gated communities"
+  - "High-income urban areas"
+  - "Executive neighborhoods"
