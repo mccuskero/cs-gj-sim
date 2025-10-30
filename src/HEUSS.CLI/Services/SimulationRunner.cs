@@ -126,24 +126,25 @@ public class SimulationRunner : ISimulationRunner
         var energyRange = GetArchetypeEnergyRange(archetype);
         var biologicalPercent = GetArchetypeBiologicalPercent(archetype);
 
-        var personEnergy = population * 10_000_000; // ~10 MJ/person biological
         var totalEnergy = population * energyRange.Average;
+        var biologicalEnergy = totalEnergy * (biologicalPercent / 100.0);
+        var technologicalEnergy = totalEnergy - biologicalEnergy;
 
         return new EntityEnergyBreakdown
         {
             PersonCount = population,
-            PersonEnergyJoules = personEnergy,
+            PersonEnergyJoules = biologicalEnergy,
             HouseCount = (long)(population * GetHouseOwnershipRate(archetype)),
-            HouseEnergyJoules = totalEnergy * 0.4,
+            HouseEnergyJoules = technologicalEnergy * 0.50,
             VehicleCount = (long)(population * GetVehicleOwnershipRate(archetype)),
-            VehicleEnergyJoules = totalEnergy * 0.3,
+            VehicleEnergyJoules = technologicalEnergy * 0.35,
             BusinessCount = population / 50,
-            BusinessEnergyJoules = totalEnergy * 0.2,
+            BusinessEnergyJoules = technologicalEnergy * 0.10,
             DataCenterCount = population / 100_000,
-            DataCenterEnergyJoules = totalEnergy * 0.05,
+            DataCenterEnergyJoules = technologicalEnergy * 0.03,
             FarmCount = population / 1000,
-            FarmEnergyJoules = totalEnergy * 0.03,
-            FarmFoodOutputJoules = totalEnergy * 0.15
+            FarmEnergyJoules = technologicalEnergy * 0.02,
+            FarmFoodOutputJoules = biologicalEnergy * 1.5 // Farms produce 1.5x what people consume
         };
     }
 
@@ -178,11 +179,11 @@ public class SimulationRunner : ISimulationRunner
         return archetype switch
         {
             SocioeconomicArchetype.Subsistence => 100.0,
-            SocioeconomicArchetype.LowIncome => 80.0,
-            SocioeconomicArchetype.LowerMiddle => 40.0,
-            SocioeconomicArchetype.Middle => 20.0,
-            SocioeconomicArchetype.UpperMiddle => 10.0,
-            SocioeconomicArchetype.Affluent => 5.0,
+            SocioeconomicArchetype.LowIncome => 67.0,
+            SocioeconomicArchetype.LowerMiddle => 25.0,
+            SocioeconomicArchetype.Middle => 8.0,
+            SocioeconomicArchetype.UpperMiddle => 5.0,
+            SocioeconomicArchetype.Affluent => 2.0,
             _ => 50.0
         };
     }
